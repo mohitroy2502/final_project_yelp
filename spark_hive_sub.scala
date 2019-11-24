@@ -21,3 +21,9 @@ Scala> review_per_star.write.insertInto("yelp.review_per_star")
 Scala> val saturday_open_close= hiveCtx.jsonFile("hdfs://0.0.0.0:19000/rawdata/business/business.json").select("business_id","hours").repartition(1)
 Scala> Saturday_open_close.write.insertInto("yelp.Saturday_open_close")
 
+//Top states and cities in total number of reviews(Top State Cities)
+scala> val top_states_cities= hiveCtx.jsonFile("hdfs://0.0.0.0:19000/rawdata/business/business.json").select("state","ci
+ty","review_count","stars").repartition(1)
+
+scala> top_states_cities.write.insertInto("yelp.states_cities")
+
