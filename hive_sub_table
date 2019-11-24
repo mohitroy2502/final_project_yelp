@@ -1,0 +1,27 @@
+//Top categories used in business reviews (Categories Business Review)
+hive>Create table categories_business_review(
+Business_id string,
+Categories string,
+Review_count bigint)
+Stored as textfile
+Location ‘/output/categories_business_review’;
+
+
+//Top businesses with different rated reviews (i.e. cool, funny, useful) (Business Review Rated)
+hive>Create table business_review_rated(
+Date string,
+Business_id string,
+Useful bigint,
+Funny bigint,
+Cool bigint)
+Stored as textfile
+Location ‘/output/business_review_rated’;
+
+
+//Top restaurants in number of listed categories (Restaurant Categories)
+
+hive>Create table restaurant_categories(
+Business_id string,
+Categories string)
+Stored as textfile
+Location ‘/output/restaurant_categories’;
