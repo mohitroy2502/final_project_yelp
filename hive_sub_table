@@ -42,3 +42,13 @@ Business_id string,
 Hours string)
 Stored as textfile
 Location ‘/output/Saturday_open_close’;
+
+
+#Top states and cities in total number of reviews(Top State Cities)
+create table states_cities(
+state string,
+city string,
+review_count bigint,
+stars int)
+stored as textfile,
+location ‘/output/top_states’;
