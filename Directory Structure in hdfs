@@ -1,0 +1,13 @@
+//Commands to create directory in hdfs and uplaoding respective files in those directories
+
+hdfs dfs -mkdir -p /rawdata/businesses
+hdfs dfs -mkdir -p /rawdata/reviews
+hdfs dfs -mkdir -p /rawdata/tips
+hdfs dfs -mkdir -p /rawdata/users
+hdfs dfs -mkdir -p a/rawdata/checkins
+
+hdfs dfs -copyFromLocal review.json /rawdata/reviews
+hdfs dfs -copyFromLocal business.json /rawdata/businesses
+hdfs dfs -copyFromLocal tip.json /rawdata/tips
+hdfs dfs -copyFromLocal user.json /rawdata/users
+hdfs dfs -copyFromLocal checkin.json /rawdata/checkins
