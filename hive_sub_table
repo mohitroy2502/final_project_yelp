@@ -52,3 +52,12 @@ review_count bigint,
 stars int)
 stored as textfile,
 location ‘/output/top_states’;
+
+#Top businesses with high review counts (> 1000)
+ 
+Create table review_per_star(
+Business_id string,
+Review_count string,
+Stars int)
+Stored as text file
+Location ‘/output/review_per_star’;
