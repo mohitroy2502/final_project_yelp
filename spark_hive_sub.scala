@@ -27,3 +27,6 @@ ty","review_count","stars").repartition(1)
 
 scala> top_states_cities.write.insertInto("yelp.states_cities")
 
+//Top businesses with high review counts (> 1000)
+Scala> val review_per_star= hiveCtx.jsonFile("hdfs://0.0.0.0:19000/rawdata/business/business.json").select("business_id","review_count","stars").repartition(1)
+Scala> review_per_star.write.insertInto("yelp.review_per_star")
