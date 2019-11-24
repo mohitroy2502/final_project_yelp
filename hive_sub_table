@@ -25,3 +25,20 @@ Business_id string,
 Categories string)
 Stored as textfile
 Location ‘/output/restaurant_categories’;
+
+
+//Average number of reviews per business star rating (Review Per Stars)
+Create table review_per_star(
+Business_id string,
+Review_count string,
+Stars int)
+Stored as text file
+Location ‘/output/review_per_star’;
+
+
+//Check the Saturday open and close times for few businesses (Saturday Open Close)
+Create table Saturday_open_close(
+Business_id string,
+Hours string)
+Stored as textfile
+Location ‘/output/Saturday_open_close’;
