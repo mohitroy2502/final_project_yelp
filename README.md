@@ -18,7 +18,7 @@ Analytics - From a Business perspective, we will analyze the data in the followi
   
   Analytics - Yelp Perspective
   1. Top States and Cities by Reviews
-  2. Top Businesses with high rreview counts
+  2. Top Businesses with high review counts
   3. Ratings vs Reviews
   4. Top restaurants in the number of listed categories
   5. Top businesses with cool rated reviews
