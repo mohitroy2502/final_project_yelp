@@ -45,21 +45,3 @@ STORED AS TEXTFILE;
 load data inpath '/data/checkins_by_date_by_business/part*' into table yelp.checkins_by_date_by_business;
 
 --select * from yelp.checkins_by_date_by_business limit 10;
-
-
-
---table for review.json
-
-create external table review (
-    review_id string,
-    user_id string,
-    business_id string,
-    stars bigint,
-    text string,
-    date string,
-    cool bigint,
-    funny bigint,
-    useful bigint
-)
-stored as parquet
-location  '/user/cloudera/output/yelp/reviews';
